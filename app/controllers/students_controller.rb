@@ -5,10 +5,10 @@ class StudentsController < ApplicationController
 	end
 
 	def create
-		user = User.find_by(name: params[:username])
-	    if user && user.authenticate(params[:password])
+		student = Student.find_by(username: params[:username], password: params[:password])
+	    if student
 
-	      session[:user_id] = user.id
+	      session[:student_id] = student.id
 	      flash[:success] = 'Successfully logged in!'
 	      redirect_to '/home'
 	    else
