@@ -9,6 +9,7 @@ class StudentsController < ApplicationController
     else
       flash[:warning] = 'Invalid email or password!'
       redirect_to '/login'
+		end
 	end
 
 
