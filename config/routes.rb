@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-	get '/home' => 'students#index'
+	get '/students' => 'students#index'
+	get '/students/:id/edit' => 'students#edit'
+	patch 'students/:id' => 'students#create'
+	get '/students/:id' => 'students#show'
 	get '/login' => 'students#new'
 	post '/create' => 'students#create'
 	delete '/logout' => 'students#destroy'

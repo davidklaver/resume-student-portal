@@ -1,0 +1,35 @@
+<h2>Student Page</h2>
+<p>First Name: <%= @student["firstName"] %></p>
+<p>Last Name: <%= @student["lastName"] %></p>
+<p>Email: <%= @student["email"] %></p>
+<p>LinkedIn: <%= @student["linkedinUrl"] %>></p>
+<p>Twitter: <%= @student["twitterHandle"] %></p>
+<p>Personal Website: <%= @student["personalWebsite_url"] %></p>
+<p>Online Resume: <%= @student["onlineResume_url"] %></p>
+<p>Github: <%= @student["githubUrl"] %></p>
+<p>Photo: <%= @student["photo"] %></p>
+<p>Bio: <%= @student["bio"] %></p>
+<p>Github: <%= @student["githubUrl"] %></p>
+<h3>Capstone Information </h3>
+<p>Title: <%= @student["capstones"][0]["name"]%></p>
+<p>Description: <%= @student["capstones"][0]["description"]%></p>
+<p>Url Link: <%= @student["capstones"][0]["url"] %></p>
+<h3>Education Information </h3>
+<p> Start Date: <%= @student["educations"][0]["startDate"] %></p>
+<p> End Date: <%= @student["educations"][0]["endDate"] %></p>
+<p> Degree: <%= @student["educations"][0]["degree"] %></p>
+<p> Company Name: <%= @student["educations"][0]["companyName"] %></p>
+<p> Details: <%= @student["educations"][0]["details"] %></p>
+<h3> Experiences </h3>
+<p> Start Date: <%= @student["experiences"][0]["startDate"] %></p>
+<p> End Date: <%= @student["experiences"][0]["endDate"] %></p>
+<p> Job Title: <%= @student["experiences"][0]["jobTitle"] %></p>
+<p> Company Name: <%= @student["experiences"][0]["companyName"] %></p>
+<p> Details: <%= @student["experiences"][0]["details"] %></p>
+<h3> Skills </h3>
+<ul>
+    <% @student["skills"].each do |skill| %>
+        <li> <%= skill["skill"] %> </li>
+    <%end %>
+</ul>
+Add Comment
